@@ -1,0 +1,35 @@
+const emailForm = document.querySelector(".email-form");
+const personalInfo = document.querySelector(".personal-info");
+const submit = document.getElementsByClassName("btn-submit")[0];
+
+console.log(submit);
+
+// funtion check email return true/false
+function checkEmail(email) {
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(String(email).toLowerCase()) ;
+}
+
+// check email when click submit button
+submit.addEventListener("click", function () {
+    const email = document.getElementById("email").value;
+    if (checkEmail(email)) {
+      emailForm.classList.add("hide");
+      personalInfo.classList.remove("hide");
+    } else {
+      alert("Vui lòng nhập đúng định dạng Email !");
+    }
+  });
+
+// function show/hide job-items
+function showHide (id, btn)  {
+    const element =document.querySelector(`.${id}`);
+
+    if (!element.classList.contains("hide")) {
+        element.classList.add("hide");
+        document.querySelector(`.${btn}`).textContent = "↓ VIEW MORE";
+    } else {
+        element.classList.remove("hide");
+        document.querySelector(`.${btn}`).textContent = "↓ VIEW LESS";
+    }
+}

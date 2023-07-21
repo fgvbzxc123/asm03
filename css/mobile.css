@@ -1,0 +1,64 @@
+@media screen and (max-width: 768px){
+    /* Hide avartar */
+    .nav-bar::after {
+        visibility: hidden;
+    }
+    .nav-bar-text {
+        display: none;
+      } 
+    /* Nav-bar grid */
+      .nav-bar {
+        display:grid;
+        grid-template-columns: auto;
+        justify-content: start;
+        align-items: center;
+      }
+    /*Personal-info  */
+      .about > .container {
+        display: grid;
+        grid-template-columns: 700px;
+        justify-content: start;
+        align-items: start;
+      }
+      .about {
+        margin-bottom: 50px;
+        margin-top: 100px;
+        margin-left: 30px;
+      }
+  /* Job-info */
+    #job-info .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: start;
+      margin-left: 30px;
+    }
+    /* Certifition  */
+    .container-cer {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      font-size: 14px;
+      gap: 10px;
+      margin-left: 30px;
+    }
+
+    .item1 img, .item2 img, .item3 img {
+      padding-left: 20px;
+      border-left: 2px solid #f59f00;
+    }
+
+    .item2 {
+      margin-left: 20px;
+    }
+  
+    .container-cer img {
+      width: auto;
+    }
+    /* Du an */
+    .container-project {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      justify-content: center;
+    }
+}

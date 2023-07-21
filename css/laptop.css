@@ -1,0 +1,15 @@
+@media screen  and (min-width: 992px) {
+    /* Nav-bar grid */
+    .nav-bar {
+        display:grid;
+        grid-template-columns: 180px 180px auto 180px 180px;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Job-info */
+    .about > .container {
+        display: flex;
+        justify-content: center;
+       
+      }
+}

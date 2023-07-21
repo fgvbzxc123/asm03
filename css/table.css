@@ -1,0 +1,61 @@
+@media screen and (max-width: 992px) {
+    /* Hide avartar */
+    .nav-bar::after {
+        visibility: hidden;
+    }
+    .nav-bar-text {
+        visibility: inherit;
+    }
+    /* Nav-bar grid */
+      .nav-bar {
+        display:grid;
+        grid-template-columns: auto auto 0px auto auto;
+        justify-content: center;
+        align-items: center;
+      }
+    /* Personal-info */
+      .about > .container {
+        display: flex;
+        justify-content: center;
+      }
+      #target {
+        width: 50%;
+        padding: 50px 10px;
+        background-color: #f7f7f7;
+      }
+      #personal-info {
+        width: 50%;
+        padding: 50px 10px;
+        background-color: #f1f3f5;
+      }
+      #personal-info ul li {
+          font-size: 18px;
+          list-style-type: none;
+          line-height: 1.2;
+          margin-bottom: 20px;
+        }
+      #personal-info .icons {
+          padding: 10px 30px;
+      }
+  /* Job-info */
+    #job-info .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      justify-content: center;
+      margin-left: 50px;
+    }
+  /*Certification  */
+    .container-cer-item {
+      display: grid;
+      font-size: 14px;
+      gap: 10px;
+      border: none;
+    }
+  /* Du an */
+
+
+    
+    
+
+}

@@ -1,0 +1,534 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+
+body {
+  font-family: "inner", sans-serif;
+  color: #495057;
+
+  margin: 0 auto;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+/* SU DUNG HINH ANH LAM HINH NEN VA VIEWPORT CHINH BANG HEIGHT CUA THE HEADER */
+
+header {
+
+
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 100px;
+}
+
+.banner {
+  /* Chen hinh nen */
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/banner.jpg");
+  background-size: cover;
+
+  padding: 100px;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  color: #fff;
+}
+
+.banner h1 {
+  font-size: 52px;
+}
+
+/* DUNG FLEX VA CAC THUOC TINH LIEN QUAN DE TAO NAV BAR */
+
+.nav-bar {
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+.nav-bar-items {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+  border-left: 1px solid #f7f7f7;
+  padding-left: 40px;
+
+}
+
+.nav-bar-items:last-child {
+  border-right: 1px solid #f7f7f7;
+  padding-right: 40px;
+}
+
+.nav-bar-items a:link,
+.nav-bar-items a:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #495057;
+}
+
+.nav-bar-text {
+  
+  height: 100%;
+  width: 200px;
+  padding-left: 40px;
+}
+
+.nav-bar-text span {
+  color: #ced4da;
+}
+
+.nav-bar-text h2 {
+  font-size: 30px;
+}
+
+.nav-bar i {
+  color: #4263eb;
+}
+
+/* TẠO HÌNH ẢNH CÁ NHÂN PHẦN NÂNG CAO */
+.nav-bar::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  background-image: url(../images/default-avatar.webp);
+  background-size: cover;
+
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+
+
+/* DUNG FLEX DE CHIA RA 2 COT BANG NHAU: MUC TIEU NGHE NGIEP... */
+.about > .container {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+#target {
+  width: 50%;
+  padding: 50px 50px;
+  background-color: #f7f7f7;
+}
+
+#target > p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#personal-info {
+  width: 50%;
+  padding: 50px 50px;
+
+  background-color: #f1f3f5;
+}
+
+#personal-info .icons i {
+  color: blue;
+}
+
+#personal-info ul {
+  font-size: 18px;
+  list-style-type: none;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#job-info  i {
+  scale: 3;
+  color: #4263eb;
+  margin-right: 20px;
+}
+
+
+#personal-info span {
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.hide {
+  display: none;
+}
+
+#email {
+  width: 100%;
+  color: gray;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#personal-info label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.btn-submit {
+  background: #0079bc;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.job-info-content:hover .btn {
+  display: block;
+}
+
+.btn {
+  background-color: rgba(244, 244, 105, 0.648);
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  display: none;
+}
+
+.job-info-content {
+  position: relative;
+}
+/* SU DUNG FLEX VA THUOC TINH WRAP 
+DE CHIA THANH 6 COT 
+KINH NGHIEM - HOC VAN - HOAT DONG - ...*/
+
+#job-info {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#job-info > .container {
+  display: flex;
+  /* Xuong hang neu khong du width */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+
+}
+
+#job-info .job-info-content {
+  width: 350px;
+  height: auto;
+  padding: 20px 20px 20px 40px;
+
+  border: 1px solid #495057;
+}
+
+/* 3 COT CUOI CUNG CO KICH THUOC BANG NHAU VA 
+NHO HON 3 COT TREN */
+
+#job-info .job-info-content:nth-child(4),
+#job-info .job-info-content:nth-child(5),
+#job-info .job-info-content:nth-child(6) {
+  width: 350px;
+  height: auto;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 10px;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+.container-content > ul {
+  list-style-type: none;
+
+  margin-left: -10px;
+  font-size: 18px;
+}
+
+.container-content .container-item {
+  margin-bottom: 30px;
+}
+
+.container-content h3 {
+  margin-bottom: 12px;
+}
+
+.container-content p {
+  font-style: italic;
+}
+
+.container-content .item {
+  list-style-type: none;
+  padding-left: 25px;
+  line-height: 1.5;
+}
+
+/* TẠO DẤU CHẤM TRÒN MÀU  */
+
+.container-item {
+  position: relative;
+}
+
+.container-item::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 20px;
+  left: -6%;
+  bottom: 0;
+  background-color: #4263eb;
+}
+
+.container-content span {
+  background-color: #4263eb;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* STYLE SỞ THÍCH */
+
+.container-hobby {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+
+.container-hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#job-info .container-hobby-item i {
+  scale: 2;
+}
+
+/* STYLE NGÔN NGỮ + KỸ NĂNG */
+.container-level {
+  margin-left: 20px;
+}
+
+.container-level-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.level-bar-color,
+.level-bar-nocolor {
+  display: inline-block;
+}
+
+.level-bar-color {
+  width: 60px;
+  height: 3px;
+  background-color: #4263eb;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+.level-bar-nocolor {
+  width: 60px;
+  height: 3px;
+  background-color: #495057;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+/* CHỨNG CHỈ - THÀNH TÍCH GIẢI THƯỞNG */
+#certificate img {
+  width: 240px;
+  height: 120px;
+}
+
+#certificate h1 {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#certificate .container {
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 1400px;
+}
+
+.container-cer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  justify-items: start;
+  font-size: 18px;
+  gap: 20px;
+}
+
+.container-cer-item {
+  display: flex;
+  gap: 20px;
+}
+
+.container-cer-item h3 {
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.container-cer-item ul {
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+.item1 {
+  padding: 20px;
+}
+
+.item3 {
+  grid-column: 1/-1;
+  border-top: 2px solid #f59f00;
+  padding: 20px;
+}
+
+.item2 {
+  padding: 20px 20px 20px 0;
+}
+
+.item2 img {
+  padding-left: 20px;
+  border-left: 2px solid #f59f00;
+}
+
+/* STYLE DỰ ÁN */
+#project {
+  padding: 20px 0;
+  margin: 0 50px;
+  width: auto;
+}
+
+#project img {
+  width: 100%;
+  height: auto;
+}
+
+.container-project {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+}
+
+.present {
+  background-color: #4263eb;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.job {
+  border: 1px solid rgb(220, 220, 220);
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 18px;
+  width: auto;
+}
+.job-title {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgb(220, 220, 220);
+}
+.job-year {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid rgb(220, 220, 220);
+  border-top:none;
+}
+.prj-line {
+  padding: 15px;
+  border: 1px solid rgb(220, 220, 220);
+  border-top:none;
+}
+
+.r2 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 80px 1fr;
+}
+.row {
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.col {
+  width: 25%;
+}
+
+/* STYLE Footer */
+
+#footer .container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+}
+
+#footer .container-footer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#footer a {
+  text-decoration: none;
+  color: rgb(154, 167, 160);
+}
+
+#footer i {
+  scale: 3;
+  color: #4263eb;
+  padding-right: 5px;
+}
+
+
